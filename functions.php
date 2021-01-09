@@ -4,6 +4,7 @@ function fakiversity_files()
 {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  //loads files dependant on local or deployment
   if (strstr($_SERVER['SERVER_NAME'], 'fakeiversity.local')) {
     wp_enqueue_script('main-JS', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   } else {
